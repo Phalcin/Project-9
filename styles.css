@@ -1,0 +1,153 @@
+@import url("https://fonts.googleapis.com/css2?family=Karla:wght@400;700&display=swap");
+
+:root {
+  --Cyan: hsl(179, 62%, 43%);
+  --Bright-Yellow: hsl(71, 73%, 54%);
+  --Light-Gray: hsl(204, 43%, 93%);
+  --Grayish-Blue: hsl(218, 22%, 67%);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background: hsl(204, 43%, 93%);
+  font-family: "Karla", sans-serif;
+}
+
+.price-component {
+  height: 100vh;
+  display: grid;
+  align-items: center;
+  align-content: center;
+  justify-content: center;
+  margin: 0 auto;
+  width: 80%;
+  max-width: 640px;
+  grid-template-columns: 1.38fr 1.38fr;
+  grid-template-rows: 0.15fr 0.17fr;
+  grid-auto-flow: row;
+  grid-template-areas:
+    "header header"
+    "content sidebar";
+}
+
+.top-box,
+.second-box,
+.third-box {
+  height: 100%;
+  padding: 26px 40px;
+}
+
+.top-box {
+  grid-area: header;
+  background-color: white;
+  padding: 26px 50px;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+
+.top-box-h1 {
+  color: hsl(179, 62%, 43%);
+}
+
+.top-box-h2 {
+  font-size: 1.2rem;
+  color: hsl(71, 73%, 54%);
+}
+
+.top-box-p {
+  line-height: 1.5;
+  color: hsl(218, 22%, 67%);
+}
+
+.second-box,
+.third-box {
+  color: white;
+}
+
+.second-box {
+  grid-area: content;
+  background-color: hsl(179, 62%, 43%);
+  font-size: 1.2rem;
+  border-bottom-left-radius: 10px;
+}
+
+.second-box-h2 {
+  color: white;
+  font-size: 1.2rem;
+}
+
+.money {
+  font-size: 2rem;
+  display: flex;
+  align-items: center;
+}
+
+.money-p {
+  font-size: 1rem;
+  margin-left: 1rem;
+  color: hsla(203, 44%, 93%, 0.685);
+}
+
+.second-box-p {
+  font-size: 1rem;
+}
+
+.link {
+  margin: 2.5rem auto 0rem auto;
+}
+
+.button {
+  display: flex;
+  justify-content: center;
+  text-decoration: none;
+  color: white;
+  background-color: hsl(71, 73%, 54%);
+  padding: 0.8rem;
+  border-radius: 5px;
+  box-shadow: 0px 3px 5px hsl(179, 77%, 29%);
+}
+
+.third-box {
+  grid-area: sidebar;
+  background-color: hsl(179, 62%, 43%);
+  opacity: 0.6;
+  border-bottom-right-radius: 10px;
+}
+
+.third-box-h2 {
+  font-size: 1.2rem;
+}
+
+.third-box-p {
+  line-height: 1.7;
+  color: hsl(204, 43%, 93%);
+}
+
+@media (max-width: 600px) {
+  .price-component {
+    margin: 10rem auto;
+    display: grid;
+    grid-template-columns: 0.7fr;
+    grid-template-areas:
+      "header "
+      "content"
+      "sidebar";
+    border-radius: 0;
+    width: 100%;
+    align-content: center;
+    height: 100vh;
+  }
+
+  .second-box {
+    border-radius: 0;
+  }
+
+  .third-box {
+    border-bottom-left-radius: 10px;
+  }
+}
