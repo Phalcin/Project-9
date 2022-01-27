@@ -90,7 +90,7 @@ body {
 .money-p {
   font-size: 1rem;
   margin-left: 1rem;
-  color: hsla(203, 44%, 93%, 0.685);
+  color: hsl(204, 43%, 93%);
 }
 
 .second-box-p {
@@ -115,7 +115,7 @@ body {
 .third-box {
   grid-area: sidebar;
   background-color: hsl(179, 62%, 43%);
-  opacity: 0.6;
+  opacity: 0.7;
   border-bottom-right-radius: 10px;
 }
 
